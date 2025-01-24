@@ -18,7 +18,7 @@ export const search_repos = (term: string) => {
       );
 
       const names = data.objects.map((result: any) => {
-        return result.name;
+        return result.package.name;
       });
 
       dispatch({ type: ActionType.SEARCH_REPOS_SUCCESS, payload: names });
